@@ -91,13 +91,13 @@ class App extends React.Component {
         <ul className="pokelist">
           {pokemon.map((item) => {
             return (
-              <li className="pokemon" key={`pokemon${item.id}`}>
+              <li className="pokemon" key={item.id}>
                 <h2 className="name"> {item.name}</h2>
-                <img className="pokemonImage" src={item.url}></img>
+                <img className="pokemonImage" src={item.url} alt={item.name}></img>
                 <ul className="pokemonTypes">
-                  {item.types.map((types)=> { 
+                  {item.types.map((types, index)=> { 
                     return(
-                      <li className="pokemonType">{types}</li>
+                      <li className="pokemonType" key={index}>{types}</li>
                     ); 
                   })}
                 </ul>
