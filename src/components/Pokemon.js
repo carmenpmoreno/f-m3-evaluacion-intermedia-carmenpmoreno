@@ -12,8 +12,8 @@ class Pokemon extends React.Component {
         />
         <ul className="pokemonTypes">
           {this.props.item.types.map(types => {
-            console.log(this.props.item.types.indexOf(types));
-            return <li className="pokemonType" key={this.props.item.types.indexOf(types)} >{types}</li>;
+
+            return <li className="pokemonType" key={this.props.item.name + this.props.item.types.indexOf(types)} >{types}</li>;
           })}
         </ul>
       </li>
