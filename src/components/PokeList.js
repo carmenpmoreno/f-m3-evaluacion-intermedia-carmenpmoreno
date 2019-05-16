@@ -91,6 +91,7 @@ class PokeList extends React.Component {
         {pokemon.map(item => {
           return (
             <Pokemon 
+                key = {item.name}
                 item = {item}
             />
           );
