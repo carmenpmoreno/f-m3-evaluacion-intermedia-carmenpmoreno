@@ -1,0 +1,11 @@
+.pokemon {
+    list-style: none;
+    border: 1px solid grey;
+    padding: 10px;
+    margin: 10px;
+    width: 150px;
+  }
+  .pokemonTypes {
+    list-style: none;
+  }
+  
