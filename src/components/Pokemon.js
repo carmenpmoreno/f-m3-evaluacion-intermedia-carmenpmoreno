@@ -4,23 +4,15 @@ import '../stylesheets/Pokemon.css';
 
 class Pokemon extends React.Component {
   render() {
-    const {
-      id,
-      name,
-      url,
-      types,
-    } = this.props.item;
+    const { id, name, url, types } = this.props.item;
     return (
       <li className="pokemon" key={id}>
-        <h2 className="name"> {name}</h2>
         <img className="pokemonImage" src={url} alt={name} />
+        <h2 className="name"> {name}</h2>
         <ul className="pokemonTypes">
           {types.map(type => {
             return (
-              <li
-                className="pokemonType"
-                key={types.indexOf(type)}
-              >
+              <li className="pokemonType" key={types.indexOf(type)}>
                 {type}
               </li>
             );
