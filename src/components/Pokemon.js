@@ -1,21 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../stylesheets/Pokemon.css'
+import '../stylesheets/Pokemon.css';
 
 class Pokemon extends React.Component {
   render() {
-    return (
-      <li className="pokemon" key={this.props.item.id}>
-        <h2 className="name"> {this.props.item.name}</h2>
-        <img
-          className="pokemonImage"
-          src={this.props.item.url}
-          alt={this.props.item.name}
-        />
-        <ul className="pokemonTypes">
-          {this.props.item.types.map(types => {
+    const {
+      id,
+      name,
+      url,
+      types,
+    } = this.props.item;
 
-            return <li className="pokemonType" key={this.props.item.name + this.props.item.types.indexOf(types)} >{types}</li>;
+    return (
+      <li className="pokemon" key={id}>
+        <h2 className="name"> {name}</h2>
+        <img className="pokemonImage" src={url} alt={name} />
+        <ul className="pokemonTypes">
+          {types.map(type => {
+            return (
+              <li
+                className="pokemonType"
+                key={types.indexOf(type)}
+              >
+                {type}
+              </li>
+            );
           })}
         </ul>
       </li>
@@ -23,9 +32,10 @@ class Pokemon extends React.Component {
   }
 }
 Pokemon.propTypes = {
+  item: PropTypes.object,
   id: PropTypes.number,
   name: PropTypes.string,
   url: PropTypes.string,
-  types: PropTypes.string,
-}
+  types: PropTypes.string
+};
 export default Pokemon;
