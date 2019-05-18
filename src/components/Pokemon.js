@@ -10,7 +10,6 @@ class Pokemon extends React.Component {
       url,
       types,
     } = this.props.item;
-
     return (
       <li className="pokemon" key={id}>
         <h2 className="name"> {name}</h2>
@@ -36,6 +35,6 @@ Pokemon.propTypes = {
   id: PropTypes.number,
   name: PropTypes.string,
   url: PropTypes.string,
-  types: PropTypes.string
+  types: PropTypes.arrayOf(PropTypes.string)
 };
 export default Pokemon;
