@@ -8,4 +8,10 @@
         flex-flow: row wrap;
         justify-content: center;
     }
-  }
+}
+@media all and (min-width:1120px) {
+    .pokelist {
+    max-width: 1120px;
+    margin: 0 auto;
+    }
+}
