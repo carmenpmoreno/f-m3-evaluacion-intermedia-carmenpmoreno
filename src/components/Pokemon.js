@@ -4,7 +4,12 @@ import '../stylesheets/Pokemon.css';
 
 class Pokemon extends React.Component {
   render() {
-    const { id, name, url, types } = this.props.item;
+    const { 
+      id, 
+      name, 
+      url, 
+      types 
+    } = this.props.item;
     return (
       <li className="pokemon" key={id}>
         <img className="pokemonImage" src={url} alt={name} />
