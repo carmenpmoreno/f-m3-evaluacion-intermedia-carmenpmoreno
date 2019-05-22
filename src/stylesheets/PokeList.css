@@ -1,3 +1,7 @@
+.pokemonItem {
+    list-style: none;
+  
+}
 .pokelist {
   padding: 0;
   display: flex;

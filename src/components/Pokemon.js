@@ -4,14 +4,9 @@ import '../stylesheets/Pokemon.css';
 
 class Pokemon extends React.Component {
   render() {
-    const { 
-      id, 
-      name, 
-      url, 
-      types 
-    } = this.props.item;
+    const { name, url, types } = this.props.item;
     return (
-      <li className="pokemon" key={id}>
+      <div className="pokemonCard">
         <img className="pokemonImage" src={url} alt={name} />
         <h2 className="name"> {name}</h2>
         <ul className="pokemonTypes">
@@ -23,13 +18,12 @@ class Pokemon extends React.Component {
             );
           })}
         </ul>
-      </li>
+      </div>
     );
   }
 }
 Pokemon.propTypes = {
   item: PropTypes.object,
-  id: PropTypes.number,
   name: PropTypes.string,
   url: PropTypes.string,
   types: PropTypes.arrayOf(PropTypes.string)
