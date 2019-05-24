@@ -23,9 +23,7 @@ class Pokemon extends React.Component {
   }
 }
 Pokemon.propTypes = {
-  item: PropTypes.object,
-  name: PropTypes.string,
-  url: PropTypes.string,
-  types: PropTypes.arrayOf(PropTypes.string)
+  item: PropTypes.object
 };
+
 export default Pokemon;
