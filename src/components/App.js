@@ -1,6 +1,6 @@
 import React from 'react';
-import './stylesheets/App.css';
-import PokeList from './components/PokeList';
+import './App.css';
+import PokeList from './PokeList';
 
 class App extends React.Component {
   render() {
