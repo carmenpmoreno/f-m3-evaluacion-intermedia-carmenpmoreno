@@ -4,7 +4,7 @@ import '../stylesheets/Pokemon.css';
 
 class Pokemon extends React.Component {
   render() {
-    const { name, url, types } = this.props.item;
+    const { id, name, url, types } = this.props.item;
     return (
       <div className="pokemonCard">
         <img className="pokemonImage" src={url} alt={name} />
@@ -12,7 +12,7 @@ class Pokemon extends React.Component {
         <ul className="pokemonTypes">
           {types.map(type => {
             return (
-              <li className="pokemonType" key={types.indexOf(type)}>
+              <li className="pokemonType" key={type + id}>
                 {type}
               </li>
             );
